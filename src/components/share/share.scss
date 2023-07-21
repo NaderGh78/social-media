@@ -1,0 +1,86 @@
+@import "../../style.scss";
+
+.share {
+
+    @include themify($themes) {
+        background-color: themed("bg");
+        border-radius: 10px;
+        padding: 15px;
+        -webkit-box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.38);
+        -moz-box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.38);
+        box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.38);
+        margin-bottom: 25px;
+
+        .top {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            img {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+
+            input {
+                border: none;
+                outline: none;
+                padding: 7px 10px;
+                width: 85%;
+                background-color: transparent;
+                color: themed("textColor");
+            }
+        }
+
+        hr {
+            margin: 15px 0;
+            border: none;
+            height: 0.5px;
+            background-color: themed("border");
+        }
+
+        .bottom {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            ul {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                display: flex;
+                align-items: center;
+
+                li {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    text-transform: capitalize;
+                    margin-right: 17px;
+                    cursor: pointer;
+
+                    img {
+                        width: 20px;
+                    }
+
+                    span {
+                        font-size: 12px;
+                        font-weight: 600;
+                        color: gray;
+                    }
+                }
+            }
+
+            button {
+                border: none;
+                padding: 5px;
+                font-size: 11px;
+                border-radius: 3px;
+                background-color: #5271ff;
+                color: #fff;
+                cursor: pointer;
+            }
+        }
+    }
+}

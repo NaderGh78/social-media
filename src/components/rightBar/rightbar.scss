@@ -1,0 +1,127 @@
+@import "../../style.scss";
+
+.rightbar {
+
+    @include themify($themes) {
+        flex: 3;
+        position: sticky;
+        top: 70px;
+        height: calc(100vh - 70px);
+        overflow: scroll;
+        background-color: themed("bgSoft");
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        @include mobile {
+            display: none;
+        }
+
+        @include tablet {
+            display: none;
+        }
+
+        .container {
+            padding: 20px;
+
+            .item {
+                -webkit-box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.09);
+                -moz-box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.09);
+                box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.09);
+                padding: 20px;
+                margin-bottom: 20px;
+                background-color: themed("bgSoft");
+
+                h2 {
+                    color: themed("textColorSoft");
+                    font-size: 15px;
+                    font-weight: 400;
+                    margin-bottom: 20px;
+                }
+
+                .user {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    margin-top: 10px;
+
+                    .usrInfo {
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                        position: relative;
+
+                        img {
+                            width: 30px;
+                            height: 30px;
+                            border: 1px solid lightgray;
+                            border-radius: 50%;
+                            object-fit: cover;
+                            cursor: pointer;
+                        }
+
+                        .online {
+                            width: 12px;
+                            height: 12px;
+                            border-radius: 50%;
+                            background-color: limegreen;
+                            position: absolute;
+                            top: 0;
+                            left: 22px;
+                        }
+
+                        p {
+                            margin: 0;
+                            color: themed("textColorSoft");
+                            font-size: 12px;
+                        }
+
+                        h5 {
+                            color: themed("textColor");
+                            display: flex;
+                            gap: 9px;
+                            font-size: 12px;
+                            font-weight: 600;
+
+                            span {
+                                font-size: inherit;
+                            }
+
+                            p {
+                                font-size: inherit;
+                            }
+                        }
+                    }
+
+                    span {
+                        color: themed("textColor");
+                        font-size: 10px;
+                    }
+
+                    .buttons {
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+
+                        button {
+                            border: none;
+                            padding: 5px;
+                            color: #fff;
+                            font-size: 11px;
+                            cursor: pointer;
+
+                            &:first-child {
+                                background-color: #5271ff;
+                            }
+
+                            &:last-child {
+                                background-color: #f0544f;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
